@@ -1,14 +1,41 @@
 {
   "name": "endgametv-net",
   "version": "0.1.0",
-  "description": "EndGameTV Public Website",
+  "description": "EndGameTV Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "SET NODE_ENV='production' & webpack -p",
+    "serve": "webpack-dev-server --open --hot"
   },
   "author": "Carter Fritsch",
-  "license": "ISC",
+  "license": "Private",
   "dependencies": {
-    "express": "^4.15.3"
+    "axios": "^0.16.2",
+    "prop-types": "^15.5.10",
+    "query-string": "^4.3.4",
+    "react": "^15.6.1",
+    "react-css-modules": "^4.5.2",
+    "react-dom": "^15.6.1",
+    "react-responsive-carousel": "^3.1.24",
+    "react-router-dom": "^4.1.1",
+    "react-twitter-widgets": "^1.4.0",
+    "react-youtube": "^7.4.0",
+    "webpack": "^3.1.0",
+    "wpcom": "^5.4.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "html-webpack-plugin": "^2.29.0",
+    "node-sass": "^4.5.3",
+    "postcss-icss-values": "^2.0.1",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack-dev-server": "^2.5.1"
   }
 }

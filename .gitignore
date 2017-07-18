@@ -48,3 +48,5 @@ Temporary Items
 
 # Project Files
 node_modules/
+*.env
+.env
