@@ -3,53 +3,53 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 var config = {
-    entry: './src/index.js',
+    entry: './src/index',
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'index_bundle.js',
+        path: path.resolve(__dirname, './dist'),
+        filename: 'app.js',
         publicPath: '/'
     },
     module: {
         rules: [
-            { test: /\.(js)$/, 
-              use: {
-                loader: 'babel-loader',
-                options: {
-                  presets: ["env", "react"]
+            { test: /\.(js)$/,
+                exclude: /node_modules/,
+                
+                use: [
+                    { loader: 'babel-loader',
+                        options: {
+                            presets: ["env", "react"]
+                        },
+                    }
+                ]
                 },
-              }
-            },
 
-            { test: /\.css$/,
+            { test: /\.(css|scss)$/,
+                exclude: /node_modules/,
+                
                 use: [
                     'style-loader',
                     { loader: 'css-loader',
                         options: {
                             modules: true,
-                            importLoaders: 1,
+                            importLoaders: 2,
                             localIdentName: '[name]__[local]___[hash:base64:5]',
                         }
                     }, 
-                    'postcss-loader'
+                    'postcss-loader',
+                    "sass-loader"
                 ] 
-            }, {test: /\.scss$/,
-                use: [
-                     'style-loader',
-                        { loader: 'css-loader',
-                            options: {
-                                modules: true,
-                                importLoaders: 2,
-                                localIdentName: '[name]__[local]___[hash:base64:5]',
-                            }
-                        }, 
-                        'postcss-loader',
-                        "sass-loader"
-                ]
             }
 
         ]
     },
-
+    resolve: {
+        alias: {
+            assets: path.resolve(__dirname, 'src/assets/'),
+            lib: path.resolve(__dirname, 'src/lib/'),
+            scss: path.resolve(__dirname, 'src/components/scss'),
+            elements: path.resolve(__dirname, 'src/components/elements'),
+        }
+    },
     devServer: {
         historyApiFallback: true,
         hot: true,
