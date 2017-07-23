@@ -10,7 +10,7 @@ import Header from 'elements/Header';
 import Footer from 'elements/Footer';
 
 // Routes
-// import './routes/Home'
+import Home from './routes/Home'
 
 class App extends React.Component {
 
@@ -20,7 +20,11 @@ class App extends React.Component {
             <Router>
                 <div styleName="container">
                     <Header />
-                    <div styleName="main"></div>
+                    <div styleName="main"><div styleName="wrap">
+                        <Switch>
+                            <Route exact path='/' component={Home} />
+                        </Switch>
+                    </div></div>
                     <Footer />
                 </div>
             </Router>
