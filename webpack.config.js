@@ -21,9 +21,24 @@ var config = {
                         },
                     }
                 ]
-                },
+            },
 
-            { test: /\.(css|scss)$/,
+            { test: /\.(css)$/,
+                exclude: /node_modules/,
+                
+                use: [
+                    'style-loader',
+                    { loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[name]__[local]___[hash:base64:5]',
+                        }
+                    }, 
+                    'postcss-loader',
+                ] 
+            },
+            { test: /\.(scss)$/,
                 exclude: /node_modules/,
                 
                 use: [
@@ -46,7 +61,7 @@ var config = {
         alias: {
             assets: path.resolve(__dirname, 'src/assets/'),
             lib: path.resolve(__dirname, 'src/lib/'),
-            scss: path.resolve(__dirname, 'src/components/scss'),
+            style: path.resolve(__dirname, 'src/components/style'),
             elements: path.resolve(__dirname, 'src/components/elements'),
         }
     },

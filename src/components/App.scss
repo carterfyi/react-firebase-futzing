@@ -1,0 +1,8 @@
+@import 'normalize.css';
+@import 'style/common.scss';
+@import 'style/globals.scss';
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+}

@@ -11,6 +11,8 @@
   "license": "Private",
   "dependencies": {
     "axios": "^0.16.2",
+    "file-loader": "^0.11.2",
+    "font-awesome": "^4.7.0",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.5.10",
     "query-string": "^4.3.4",
@@ -20,9 +22,12 @@
     "react-dom": "^15.6.1",
     "react-responsive-carousel": "^3.1.24",
     "react-router-dom": "^4.1.1",
+    "react-sidebar": "^2.3.2",
     "react-twitter-widgets": "^1.4.0",
     "react-youtube": "^7.4.0",
     "reactstrap": "^4.8.0",
+    "sass-loader": "^6.0.6",
+    "url-loader": "^0.5.9",
     "webpack": "^3.1.0",
     "wpcom": "^5.4.0"
   },
@@ -37,7 +42,6 @@
     "node-sass": "^4.5.3",
     "postcss-icss-values": "^2.0.1",
     "postcss-loader": "^2.0.6",
-    "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack-dev-server": "^2.5.1"
   }
