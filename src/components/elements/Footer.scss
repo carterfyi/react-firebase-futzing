@@ -1,0 +1,50 @@
+@import '../style/common.scss';
+
+.base {
+    width: 100%;
+    background-color: $brand-grey;
+}
+
+.wrap {
+    @include wrapper;
+    @include flex-center(column);
+    margin: 10px auto;
+}
+
+.copyright {
+    font-size: 12px;
+    color: white;
+    margin: 10px auto;
+    text-transform: uppercase;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+
+    a {
+        
+        margin: 0 20px;
+        color: white;
+    }
+
+    .icon {
+        transition: all .2s ease-out;
+        padding-bottom: 2px;
+    }
+    .icon:hover {
+        color: $brand-gold;
+    }
+
+    svg {
+        fill: white;
+        height: 36px;
+    }
+
+    svg:hover {
+        fill: $brand-gold;
+    }
+     
+}

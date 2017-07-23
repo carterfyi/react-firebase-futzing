@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var config = {
     entry: './src/index',
@@ -17,29 +18,25 @@ var config = {
                 use: [
                     { loader: 'babel-loader',
                         options: {
-                            presets: ["env", "react"]
+                            presets: ["env", "react"],
                         },
                     }
                 ]
             },
 
             { test: /\.(css)$/,
-                exclude: /node_modules/,
-                
                 use: [
                     'style-loader',
                     { loader: 'css-loader',
                         options: {
-                            modules: true,
-                            importLoaders: 1,
-                            localIdentName: '[name]__[local]___[hash:base64:5]',
+                            
+                            importLoaders: 1
                         }
                     }, 
                     'postcss-loader',
                 ] 
             },
             { test: /\.(scss)$/,
-                exclude: /node_modules/,
                 
                 use: [
                     'style-loader',
@@ -53,6 +50,25 @@ var config = {
                     'postcss-loader',
                     "sass-loader"
                 ] 
+            },
+            { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+
+            },
+            { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file-loader'
+
+            },
+            { test: /\.(jpg|jpeg|png|gif)$/,
+
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]'
+
+                    }
+                }
+
             }
 
         ]

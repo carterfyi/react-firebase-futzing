@@ -1,0 +1,58 @@
+@import '../style/common.scss';
+
+.base {
+    background-color: white;
+    width: 100%;
+}
+
+.wrap {
+  @include wrapper;
+  height: 60px;
+  justify-content: space-between;
+}
+
+.logo {
+    height: inherit;
+    img {
+      padding: 2px 0;
+      height: inherit;
+    }
+}
+
+.navbar {
+  @include hide-sm;
+  display: flex;
+  flex: 1;
+  max-width: 65%;
+}
+
+.nav {
+  width: 20%;
+  transform: skewX(-13deg);
+  margin: 0 2px;
+  transition: all .2s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  text-decoration: none;
+  color: $brand-grey;
+  
+  .text {
+    text-align: center;
+    font: {
+      weight: bold;
+      size: 18px;
+      family: "Stolzl"
+    }
+    @media (max-width: 992px) {
+      font-size: 15px;
+    }
+    transform: skewX(13deg);
+    text-transform: uppercase;
+  }
+}
+
+.nav:hover {
+    box-shadow: inset 0 -10px 0 -5px $brand-gold;
+  }

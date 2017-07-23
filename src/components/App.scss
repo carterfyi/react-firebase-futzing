@@ -5,4 +5,13 @@
 .container {
     display: flex;
     flex-flow: column nowrap;
+    background-color: $brand-grey;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main {
+    flex: 1;
+    background-color: $brand-purple;
+    width: 100%;
 }
