@@ -20,11 +20,11 @@ class App extends React.Component {
             <Router>
                 <div styleName="container">
                     <Header />
-                    <div styleName="main"><div styleName="wrap">
+                    <div styleName="main">
                         <Switch>
                             <Route exact path='/' component={Home} />
                         </Switch>
-                    </div></div>
+                    </div>
                     <Footer />
                 </div>
             </Router>

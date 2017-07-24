@@ -13,18 +13,6 @@
 .main {
     @include flex-center(column);
     flex: 1;
-    background-color: $brand-purple;
+    background-color: white;
     width: 100%;
-    
-}
-
-.wrap {
-    @include wrapper;
-    flex: 1;
-    border: 1px solid pink;
-}
-
-.bod {
-    flex: 1 0 auto;
-    
 }

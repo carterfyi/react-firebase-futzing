@@ -3,7 +3,7 @@ import {NavLink, Link} from 'react-router-dom';
 import CSSModules from 'react-css-modules';
 import styles from './Header.scss';
 import logo from 'assets/logo-full-lightbg.svg';
-
+import icon from 'assets/logo-icon-gold.svg';
 
 
 const activeStyle = {

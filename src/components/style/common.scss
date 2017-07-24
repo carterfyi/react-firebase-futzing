@@ -1,14 +1,15 @@
 $brand-purple: #221236;
 $brand-gold: #feb82c;
 $brand-grey: #1c1c1c;
+$container-width: 1200px;
 
 @mixin wrapper {
     width: 100%;
     padding: 0 10px;
     margin: 0 auto;
     display: flex;
-    @media (min-width: 1200px) {
-        max-width: 1200px;
+    @media (min-width: $container-width) {
+        max-width: $container-width;
   }
 }
 

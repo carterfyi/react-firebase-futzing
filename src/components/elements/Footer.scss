@@ -2,19 +2,19 @@
 
 .base {
     width: 100%;
-    background-color: $brand-grey;
+    background-color: $brand-purple;
 }
 
 .wrap {
     @include wrapper;
     @include flex-center(column);
-    margin: 10px auto;
+    margin: 1vh auto;
 }
 
 .copyright {
     font-size: 12px;
     color: white;
-    margin: 10px auto;
+    margin: 1vh auto;
     text-transform: uppercase;
 }
 
@@ -22,12 +22,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 10px auto;
+    margin: 1vh auto;
 
     a {
-        
         margin: 0 15px;
-        color: white;
+        color: rgba(255,255,255,.8)
     }
 
     .icon {
@@ -40,7 +39,7 @@
 
     svg {
         transition: all .2s ease-out;
-        fill: white;
+        fill: rgba(255,255,255,.8);
         height: 36px;
     }
 
