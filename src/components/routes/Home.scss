@@ -1,6 +1,14 @@
 @import '../style/common.scss';
 
-.title {
-    color: white;
-    font-size: 36px;
+.carousel {
+    width: 100%;
+    .wrap {
+        @include wrapper;
+        min-height: 150px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
 }
+

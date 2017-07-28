@@ -10,7 +10,7 @@ $container-width: 1200px;
     display: flex;
     @media (min-width: $container-width) {
         max-width: $container-width;
-  }
+    }
 }
 
 @mixin hide-sm {
