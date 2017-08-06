@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "endgametv-net-deploy"
+    "default": "endgametvnet",
+    "staging": "endgametvnet-staging"
   }
 }
